@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  display:flex;
+  background:#7A419B;
+  min-height:100vh;
+  background: linear-gradient(to right, #6B6F72, #c9511d);
+  background-size:cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  max-width:750px;
+  border:5px solid rgba(0,0,0,0.2);
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player__button {
+  background:none;
+  border:0;
+  line-height:1;
+  color:white;
+  text-align: center;
+  outline:0;
+  padding: 0;
+  cursor:pointer;
+  max-width:50px;
+}
+
+.full__screen {
+  background: none;
+  color: white;
+  border: 0;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  max-width: 100px;
+  cursor: pointer;
+  font-size:12px;
+}
+
+.player__button:focus {
+  border-color: #c9511d;
+}
+
+.player__slider {
+  width:10px;
+  height:30px;
+}
+
+.player__controls {
+  display:flex;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  transform: translateY(100%) translateY(-5px);
+  transition:all .3s;
+  flex-wrap:wrap;
+  background:rgba(0,0,0,0.1);
+}
+
+.player:hover .player__controls {
+  transform: translateY(0);
+}
+
+.player:hover .progress {
+  height:15px;
+}
+
+.player__controls > * {
+  flex:1;
+}
+
+.progress {
+  flex:10;
+  position: relative;
+  display:flex;
+  flex-basis:100%;
+  height:5px;
+  transition:height 0.3s;
+  background:rgba(0,0,0,0.5);
+}
+
+.progress__filled {
+  width:50%;
+  background:#c9511d;
+  flex:0;
+  flex-basis:50%;
+}
+
+
